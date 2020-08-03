@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.6.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>pw.cdmi.starlink</groupId>
+	<artifactId>starlink-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<description>参考StarLink设计的一款开源卫星运行模拟系统</description>
+
+	<developers>
+		<developer>
+			<name>alpha</name>
+			<email>alpha@126.com</email>
+		</developer>
+	</developers>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot</artifactId>
+				<version>2.2.6.RELEASE</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<modules>
+		<module>starlink-core</module>
+		<module>starlink-httpcore</module>
+		<module>starlink-algorithm</module>
+		<module>starlink-autoplan-calculate</module>
+		<module>starlink-console-service</module>
+		<module>starlink-lbs-service</module>
+		<module>starlink-orbit-calculate</module>
+		<module>starlink-plan-service</module>
+		<module>starlink-time-calculate</module>
+	</modules>
+
+</project>
