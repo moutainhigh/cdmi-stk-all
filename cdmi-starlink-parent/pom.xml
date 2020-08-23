@@ -34,11 +34,13 @@
 		<module>starlink-core</module>
 		<module>starlink-httpcore</module>
 		<module>starlink-algorithm</module>
-		<module>starlink-autoplan-calculate</module>
-		<module>starlink-console-service</module>
+		<module>starlink-calendar-calculate</module>
+		<module>starlink-configuration-service</module>
 		<module>starlink-lbs-service</module>
 		<module>starlink-orbit-calculate</module>
+		<module>starlink-orbit-updater</module>
 		<module>starlink-plan-service</module>
+		<module>starlink-schedule-service</module>
 		<module>starlink-time-calculate</module>
 	</modules>
 

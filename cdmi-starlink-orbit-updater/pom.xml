@@ -9,13 +9,12 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<artifactId>starlink-algorithm</artifactId>
-	<name>starlink-algorithm</name>
-	<description>开源卫星工具包之相关计算算法包</description>
+	<artifactId>starlink-orbit-updater</artifactId>
+	<name>starlink-orbit-updater</name>
+	<description>开源卫星工具包之卫星轨道瞬根数据更新服务</description>
 
 	<properties>
 		<java.version>1.8</java.version>
-		<cas.client.version>3.6.1</cas.client.version>
 		<nacos.version>0.2.7</nacos.version>
 	</properties>
 
@@ -27,19 +26,30 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-quartz</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
 		</dependency>
 		<!--- 使用nacos作为微服务注册中心和配置中心 -->
 		<!-- <dependency> <groupId>com.alibaba.boot</groupId> <artifactId>nacos-config-spring-boot-starter</artifactId> 
 			<version>${nacos.version}</version> </dependency> <dependency> <groupId>com.alibaba.boot</groupId> 
 			<artifactId>nacos-discovery-spring-boot-starter</artifactId> <version>${nacos.version}</version> 
 			</dependency> -->
-		<!---矩阵计算 -->
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-math3</artifactId>
-			<version>3.6.1</version>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -50,11 +60,6 @@
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
