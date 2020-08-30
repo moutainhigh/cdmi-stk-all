@@ -45,12 +45,12 @@ public class OrbitResouce {
 		return op_list;
 	}
 
-	// 获取指定卫星的最新两行数据，数组长度为2
+	// 获取指定卫星的最新两行数据，数组长度为3
 	@GetMapping("/towline")
 	public String[] getLatestOrbitTowLine(@RequestParam("satelId") String satelId) {
 		LatestOrbit orbit = service.getLatestOrbit(satelId);
 		if (orbit != null) {
-			String[] tl = new String[2];
+			String[] tl = new String[3];
 			tl[0] = orbit.getTleName();
 			tl[1] = orbit.getLine1();
 			tl[2] = orbit.getLine2();
